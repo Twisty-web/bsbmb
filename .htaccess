@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Remove .html extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Redirect to clean URL without .html extension
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s(.*)\.html\ HTTP [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# Remove index.html
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s(.*)/index\.html\ HTTP [NC]
+RewriteRule ^ /%1 [R=301,L]
