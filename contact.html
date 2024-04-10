@@ -98,6 +98,7 @@
          p a{
             color:#252525;
             font-weight: bolder;
+            font-size: 17px;
             text-decoration: none;
         }
 
@@ -135,12 +136,12 @@
 
         .input-group{
             position:relative;
-            margin: 35px;
+            margin: 25px 15px;
         }
 
         input{
             line-height: 1.6em;
-            width: clamp(220px,90%,800px);
+            width: clamp(220px,95%,900px);
             padding: 10px 20px;
             padding-top: 20px;
             background-color: transparent;
@@ -158,7 +159,7 @@
 
         input[type="submit"]{
             padding: 10px 15px;
-            width: clamp(220px,90%,800px);
+            width: clamp(220px,95%,900px);
             outline: none;
             text-transform: capitalize;
             font-family: 'montserrat', Verdana, arial, Tahoma, sans-serif;
@@ -173,12 +174,14 @@
 
         input[type="submit"]:hover{
             background-color:#D10E25;
+            cursor: pointer;
             color: #efefef;
         }
 
         .text{
             position: absolute;
             left: 10px;
+            line-height: normal;
             top: 14px;
             text-transform: uppercase;
             transition: all .3s linear;
@@ -217,6 +220,10 @@
             text-align: center;
             min-height: 50px;
             padding: 10px;
+        }
+
+        footer p{
+            font-size: 16px;
         }
 
         .text::after, .gender p::after{
@@ -287,6 +294,11 @@
                         <div class="input-group">
                             <input type="text" name="profession" size="15" id="profession" required>
                             <label class="text" for="profession">profession</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" name="language" size="15" id="language" required>
+                            <label class="text" for="language">languages know</label>
                         </div>
 
                        
